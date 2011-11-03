@@ -21,7 +21,7 @@ local AddMessage = function(self, text, ...)
 	if(type(text) == "string") then
 		text = text:gsub('|Hchannel:(%d+)|h%[?(.-)%]?|h.+(|Hplayer.+)', channel)
 
-		text = ts:format(date"%H%M.%S", text)
+		text = ts:format(date"%H:%M", text)
 	end
 
 	return origs[self](self, text, ...)
